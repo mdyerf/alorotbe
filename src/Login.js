@@ -2,15 +2,21 @@ import React,{useState,Component} from 'react';
 import "./css/stylenew.css";
 import 'boxicons';
 import 'bootstrap/dist/css/bootstrap.css';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Login extends Component {    
     state={
-        isSignUpOn:false,
-     
+        isSignUpOn:true,
+        value:"true",
+    }
+    onChange =e=>{
+        this.setState({value:e.target.value});
     }
 
 render(){
+    const{value}=this.state;
     console.log(this.state.isSignUpOn)
+    console.log(value)
   
 return(
 
@@ -44,7 +50,7 @@ return(
          
           <div className="input-field">
             <i className="fas fa-book-reader" style={{color: "#339af0"}}></i>
-            <select className="custom-select">
+            <select className="custom-select select-custom">
               <option value="select">پایه</option>
               <option value="tehran">دهم</option>
               <option value="esf">یازدهم</option>
@@ -53,7 +59,7 @@ return(
           </div>
           <div className="input-field">
             <i className="fas fa-book-reader" style={{color: "#339af0"}}></i>
-            <select className="custom-select">
+            <select className="custom-select select-custom">
               <option value="select">رشته</option>
               <option value="math">ریاضی</option>
               <option value="doc">تجربی</option>
@@ -84,17 +90,17 @@ return(
           <div className="form-check form-check-inline">
             
 
-            <input className="form-check-input" type="radio" checked name="inlineRadioOptions" id="inlineRadio1" value="option1" onclick="show_field(0)" />
+            <input className="form-check-input" type="radio"  name="inlineRadioOptions" id="inlineRadio1" value="true" checked={value==="true"} onChange={this.onChange} />
             <label className="form-check-label" for="inlineRadio1" >   بله   </label>
           </div>
           <div className="form-check form-check-inline">
-            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" onclick="show_field(1)" />
+            <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="false" checked={value==="false"} onChange={this.onChange} />
             <label className="form-check-label" for="inlineRadio2">   خیر   </label>
           </div>
           </div>
-          <div className="input-field"  id="myfield">
+          <div className={value==="true"? "input-field":"notAlorotbeh"}  id="myfield"  >
             <i className="fas fa-chalkboard-teacher" ></i>
-            <select className="custom-select">
+            <select className="custom-select select-custom">
               <option value="1">انتخاب مشاور</option>
               <option value="2">اقای تست 1</option>
               <option value="3">خانم تست 2</option>

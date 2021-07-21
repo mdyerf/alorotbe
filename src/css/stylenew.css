@@ -4,10 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body,
-input {
   font-family: "b koodak";
 }
 
@@ -67,16 +63,20 @@ form.sign-in-form {
 #signuptitle {
   margin-top: 600px;
 }
-.custom-select {
+.select-custom {
   text-align: center;
   text-decoration: none;
-  background-color: transparent;
   border: none;
   direction: rtl;
+  font-family: "b koodak";
   display: flex;
   height: 70%;
   margin: auto 0;
-  opacity: 70%;
+  opacity: 60%;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 .input-field {
@@ -91,7 +91,9 @@ form.sign-in-form {
   padding: 0 0.4rem;
   position: relative;
 }
-
+.notAlorotbeh {
+  display: none;
+}
 .input-field i {
   text-align: center;
   line-height: 55px;
