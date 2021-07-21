@@ -2,11 +2,11 @@ import React,{useState,Component} from 'react';
 import "./css/stylenew.css";
 import 'boxicons';
 import 'bootstrap/dist/css/bootstrap.css';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "./Fontawesome/LoginFont";
 class Login extends Component {    
     state={
-        isSignUpOn:true,
+        isSignUpOn:false,
         value:"true",
     }
     onChange =e=>{
@@ -26,12 +26,13 @@ return(
         <form name="form" className="sign-in-form" methoD="post" onsubmit="login()" >
           <h2 className="title">ورود</h2>
           <div className="input-field">
-            <i className="fas fa-user"></i>
+          <FontAwesomeIcon icon="user"  className="font-awsome" />
             <input type="text" name="user" placeholder="  شماره موبایل/ نام کاربری" />
           </div>
           <div className="input-field">
-                      <i className="fas fa-lock"></i>
-            <input type="password" name="password" placeholder="رمز عبور" />
+                      
+                      <FontAwesomeIcon icon="lock"  className="font-awsome"/>
+            <input type="password" name="password" placeholder="رمز عبور"  />
           </div>
           <input type="submit" value="ورود" className="btn solid" />
         </form>
@@ -39,17 +40,17 @@ return(
           <h2 className="title " id="signuptitle">ثبت نام</h2>
           <p>فیلد های آبی لزوما پر شوند</p>
           <div className="input-field">
-            <i className="fas fa-user"  style={{color: "#339af0"}} ></i>
+          <FontAwesomeIcon icon="user" style={{color: "#339af0"}}  className="font-awsome" />
             <input type="text" name=" name" placeholder="نام " />
           </div>
           <div className="input-field">
-            <i className="fas fa-user"  style={{color: "#339af0"}} ></i>
+          <FontAwesomeIcon icon="user" style={{color: "#339af0"}}  className="font-awsome" />
             <input type="text" name=" name" placeholder=" نام خانوادگی" />
           </div>
 
          
           <div className="input-field">
-            <i className="fas fa-book-reader" style={{color: "#339af0"}}></i>
+          <FontAwesomeIcon icon="book-reader" style={{color: "#339af0"}} className="font-awsome"  />
             <select className="custom-select select-custom">
               <option value="select">پایه</option>
               <option value="tehran">دهم</option>
@@ -58,7 +59,7 @@ return(
             </select>
           </div>
           <div className="input-field">
-            <i className="fas fa-book-reader" style={{color: "#339af0"}}></i>
+          <FontAwesomeIcon icon="book-reader" style={{color: "#339af0"}}  className="font-awsome" />
             <select className="custom-select select-custom">
               <option value="select">رشته</option>
               <option value="math">ریاضی</option>
@@ -68,21 +69,21 @@ return(
           </div>
        
           <div className="input-field">
-            <i className="fas fa-user"  ></i>
+          <FontAwesomeIcon icon="user"   className="font-awsome" />
             <input type="text" name="user" placeholder="نام کاربری ( دلخواه )" />
           </div>
           <div className="input-field">
-            <i className="fas fa-phone" style={{color: "#339af0"}}></i>
+          <FontAwesomeIcon icon="lock" style={{color: "#339af0"}}  className="font-awsome" />
             <input type="text" name="phone" placeholder="تلفن" />
           </div>
   
           
           <div className="input-field">
-            <i className="fas fa-lock"  style={{color: "#339af0"}}></i>
+          <FontAwesomeIcon icon="lock"  style={{color: "#339af0"}}  className="font-awsome" />
             <input type="password" name="password" placeholder="رمزعبور" />
           </div>
           <div className="input-field">
-            <i className="fas fa-lock"  style={{color: "#339af0"}}></i>
+          <FontAwesomeIcon icon="lock"  style={{color: "#339af0"}}  className="font-awsome" />
             <input type="password" name="password" placeholder=" تکرار رمزعبور" />
           </div>
           <div style={{display: "flex",  direction: "rtl"}}> 

@@ -134,7 +134,13 @@ form.sign-in-form {
   transition: 0.5s;
   position: relative;
 }
-
+.font-awsome {
+  color: #3d3d3d;
+  opacity: 70%;
+  margin-top: 20px;
+  display: flex;
+  margin-left: 10px;
+}
 .btn:hover {
   background-color: white;
   border: inset 4px #5995fd;
