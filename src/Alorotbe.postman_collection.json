@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "5d0c5326-d4fb-4a9a-b21b-edcef27229e1",
+		"name": "Alorotbe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BasicInfo",
+			"item": [
+				{
+					"name": "Get City",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/BasicInfo/City",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"BasicInfo",
+								"City"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Major",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/BasicInfo/Major",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"BasicInfo",
+								"Major"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Grade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/BasicInfo/Grade",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"BasicInfo",
+								"Grade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/BasicInfo/Course",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"BasicInfo",
+								"Course"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Identity",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"string\",\r\n  \"password\": \"string\",\r\n  \"name\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"phoneNumber\": \"string\",\r\n  \"avgLevel\": 0,\r\n  \"gpa\": 0,\r\n  \"hasSupporter\": true,\r\n  \"cityId\": 1,\r\n  \"majorId\": 0,\r\n  \"gradeId\": 0,\r\n  \"suppporterId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/Identity/Register",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"Identity",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/Identity/Login",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"Identity",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Supporters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/Identity/Supporter",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"Identity",
+								"Supporter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Planning",
+			"item": [
+				{
+					"name": "Submit Work",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"selfEstimation\": 5,\r\n  \"mood\": 1,\r\n  \"awakeTime\": \"12:00\",\r\n  \"courseStudies\": [\r\n    {\r\n      \"testCount\": 10,\r\n      \"studyTime\": \"2:20\",\r\n      \"courseId\": 2\r\n    },\r\n    {\r\n      \"testCount\": 15,\r\n      \"studyTime\": \"3:20\",\r\n      \"courseId\": 2\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/Planning/Submit",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"Planning",
+								"Submit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Daily Top 10 By Test Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/Planning/DailyTop/Test/10",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"Planning",
+								"DailyTop",
+								"Test",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Daily Top 10 By Study Time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/Planning/DailyTop/Time/10",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"Planning",
+								"DailyTop",
+								"Time",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Top 100 By Study Time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/Planning/Top/Time/100",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"Planning",
+								"Top",
+								"Time",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Top 100 By Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/Planning/Top/Test/100",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"Planning",
+								"Top",
+								"Test",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIyIiwibmJmIjoxNjI2ODkxNDAyLCJleHAiOjE2Mjc0OTYyMDIsImlhdCI6MTYyNjg5MTQwMn0.AGsHKfn86ArO3ZslsZHgQtEv1ZWMDQ4PYuo7GSRE7Fg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "https://api.alorotbe.com"
+		}
+	]
+}
